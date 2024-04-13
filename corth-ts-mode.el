@@ -64,7 +64,7 @@
     "(proc_definition (name) @font-lock-function-name-face)"
 
     :language corth :override t :feature global-definition
-    "(macro_definition (name) @font-lock-function-name-face)"
+    "(macro_definition name: (name) @font-lock-function-name-face)"
 
     :language corth :override t :feature global-definition
     "(global_allocation (name) @font-lock-function-name-face)"
