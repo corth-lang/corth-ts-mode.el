@@ -104,6 +104,6 @@
 (add-to-list 'auto-mode-alist '("\\.corth\\'" . corth-ts-mode))
 
 
-(provide 'corth-mode)
+(provide 'corth-ts-mode)
 
 ;;; corth-ts-mode.el ends here
