@@ -56,9 +56,10 @@
     "[(inline_comment) (multiline_comment)] @font-lock-comment-face"
 
     :language corth :override t :feature doc
-    "([(multiline_comment) (inline_comment)]+ @font-lock-doc-face
-      .
-      [(proc_definition) (macro_definition) (global_allocation)])"
+    "[(source_file
+       [(inline_comment) (multiline_comment)] @font-lock-doc-face)
+      (namespace_scope
+       [(inline_comment) (multiline_comment)] @font-lock-doc-face)]"
 
     :language corth :override t :feature global-definition
     "(proc_definition (name) @font-lock-function-name-face)"
