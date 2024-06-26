@@ -12,7 +12,18 @@
 
 (require 'treesit)
 
-(defvar corth-mode-syntax-table (make-syntax-table) "Syntax table for Corth files.")
+(defvar corth-mode-syntax-table
+  (let ((table (make-syntax-table)))
+    (modify-syntax-entry ?-  "w" table)
+    (modify-syntax-entry ?_  "w" table)
+    (modify-syntax-entry ??  "w" table)
+    (modify-syntax-entry ?!  "w" table)
+    (modify-syntax-entry ?:  "w" table)
+    (modify-syntax-entry ?\; "w" table)
+    (modify-syntax-entry ?/  "w" table)
+    (modify-syntax-entry ?\\ "w" table)
+    )
+  "Syntax table for Corth files.")
 
 (defvar corth-ts-features
   '((comment doc signature-comment
